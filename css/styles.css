@@ -108,14 +108,43 @@ body {
 }
 
 .site-nav .item .link.current {
+    
     color: var(--secondary-web-text-color);
 }
 
-/* .current::before {
+.site-nav .item .link.current-portfolio {
 
-} */
+    color: var(--secondary-web-text-color);
+}
+
+.current::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    background-color: var(--secondary-web-text-color);
+    width: 48px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.current-portfolio::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    background-color: var(--secondary-web-text-color);
+    width: 78px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+
 
 .navigation {
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
