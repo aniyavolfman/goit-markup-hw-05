@@ -18,7 +18,8 @@
     --header-border: #ECECEC;
     --border: #EEEEEE;
     --media-color: #AFB1B8;
-    --footer-media-color: rgba(255, 255, 255, 0.1);
+    --footer-media-color: rgba(255, 255, 255, 0.1); 
+    --overlay-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -60,7 +61,7 @@ body {
     margin: 0;
 }
 
-/*----header----*/
+/*----header------------------------------------*/
 
 .top {
     background-color: var(--third-web-text-color);
@@ -150,7 +151,7 @@ body {
 }
  
 
-/*----main content----*/
+/*----main content--------------------------------*/
 
 .section-first {
     background-color: var(--background-dark);
@@ -242,7 +243,7 @@ body {
     color: var(--contacts);
 }
 
-/* list item ----------------------*/
+/* list item ------------------------------*/
 
 .list.text {
     gap: 30px;
@@ -379,7 +380,7 @@ body {
     fill: currentColor;
 }
 
-/* portfolio */
+/* portfolio------------------------- */
 
 .portfolio-btn {
     font-style: normal;
@@ -458,7 +459,42 @@ body {
 .pixel {
     display: block;
 }
+.thumb {
+    position: relative;
+}
 
+.thumb::before {
+    position: absolute;
+    display :inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    opacity: 0;
+}
+
+.animation:hover .thumb::before {
+        opacity: 1;
+    }
+
+.animation:hover .about {
+    opacity: 1;
+}
+
+.about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 322px;
+    height: 168px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--third-web-text-color);
+    opacity: 0;
+}
 
 /*----footer----*/
 
