@@ -184,6 +184,9 @@ body {
     color: var(--third-web-text-color);
     margin-top: 0;
     margin-bottom: 30px;
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-btn {
@@ -239,28 +242,30 @@ body {
     color: var(--contacts);
 }
 
+/* list item ----------------------*/
+
 .list.text {
-    justify-content: space-between;
+    gap: 30px;
 }
 
-.text .item:not(:last-child) {
-    margin-right: 30px;
+.gap-text {
+    width: calc((100%-90px)/4);
 }
 
 .list.images {
-    justify-content: space-between;
+    gap: 30px;
 }
 
-.images .item:not(:last-child) {
-    margin-right: 30px;
+.gap-img {
+    width: calc((100%-60px)/3);
 }
 
 .list.team {
-    justify-content: space-between;
+    gap: 30px;
 }
 
-.team .item:not(:last-child) {
-    margin-right: 30px;
+.gap-team {
+    width: calc((100%-90px)/4);
 }
 
 .caption {
@@ -313,7 +318,7 @@ body {
     justify-content: space-around;
 }
 
-.item-media, .footer-item-media {
+.item-media {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -348,7 +353,7 @@ body {
     padding-bottom: 0;
 }
 
-.clients{
+.clients {
     display: flex;
     justify-content:space-between;
 }
@@ -414,38 +419,30 @@ body {
 .portfolio-nav {
     display: flex;
     justify-content: center;
+    gap: 8px;
     margin-bottom: 50px;
 }
 
-.portfolio-nav .item:not(:last-child) {
-    margin-right: 8px;
+.gap-portfolio-btn {
+    width: calc((100%-32)/5);
 }
+
 .portfolio-nav .portfolio-btn {
     display: block;
 }
 
-
 .flex-portfolio {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .flex-element {
-    width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: calc((100%/180px)/9);
 }
 
 .flex-element:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.flex-element:nth-child(3n) {
-    margin-right: 0;
-}
-
-.flex-element:nth-last-child(-n+3) {
-    margin-bottom: 0;
 }
 
 .border {
@@ -533,7 +530,7 @@ body {
 .footer-media {
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
 }
 
 .footer-link-media {
@@ -554,6 +551,9 @@ body {
     color: var(--third-web-text-color);
 }
 
-.footer-item-media:not(:last-child) {
-    margin-right: 10px;
+.footer-item-media {
+    width: calc((100%-30px)/4);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
