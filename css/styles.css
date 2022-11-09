@@ -89,11 +89,8 @@ body {
 
 .site-nav {
     display: flex;
-    margin-left: 93px;   
-}
-
-.site-nav .item:not(:last-child) {
-    margin-right: 50px;
+    margin-left: 93px;
+    gap: 50px;   
 }
 
 .site-nav .link {
@@ -150,6 +147,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+    width: calc((100%-100px)/3);
 }
 
 .site-nav .item .top-link:hover, .site-nav .item .top-link:focus {
