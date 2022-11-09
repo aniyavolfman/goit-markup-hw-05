@@ -20,6 +20,7 @@
     --media-color: #AFB1B8;
     --footer-media-color: rgba(255, 255, 255, 0.1); 
     --overlay-color: rgba(33, 150, 243, 0.9);
+    --overlay-color-secondary: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -110,6 +111,10 @@ body {
     color: var(--secondary-web-text-color);
 }
 
+/* .current::before {
+
+} */
+
 .navigation {
     font-weight: 500;
     font-size: 14px;
@@ -149,7 +154,7 @@ body {
     vertical-align: middle;
     fill: currentColor;  
 }
- 
+
 
 /*----main content--------------------------------*/
 
@@ -380,6 +385,32 @@ body {
     fill: currentColor;
 }
 
+.box-relative {
+    position: relative;
+}
+
+.box-relative::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    background-color: var(--overlay-color-secondary);
+    width: 370px;
+    height: 70px;
+    bottom: 0;
+} 
+
+.box-absolute {
+    position: absolute;
+    top: 251px;
+    left: 107px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--third-web-text-color);
+}
 /* portfolio------------------------- */
 
 .portfolio-btn {
@@ -465,7 +496,7 @@ body {
 
 .thumb::before {
     position: absolute;
-    display :inline-block;
+    display: inline-block;
     content: '';
     width: 100%;
     height: 100%;
